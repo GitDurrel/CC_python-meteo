@@ -1,5 +1,16 @@
-ville,température,description,date_heure
-Paris,15,Ciel dégagé,2023-10-01 12:00:00
-Londres,10,Pluie légère,2023-10-01 12:05:00
-New York,20,Ensoleillé,2023-10-01 12:10:00
-Tokyo,18,Nuageux,2023-10-01 12:15:00
+﻿Ville,Température,Description,Datetime
+Douala,28.78,broken clouds,2024-12-22T08:46:57.970841
+Douala,28.78,broken clouds,2024-12-22T09:02:02.313385
+Douala,28.78,broken clouds,2024-12-22T09:04:32.778023
+Bafoussam,22.02,broken clouds,2024-12-22T09:04:40.618024
+Bafoussam,22.02,broken clouds,2024-12-22T09:06:48.831986
+Douala,28.78,broken clouds,2024-12-22T09:06:57.153010
+Douala,28.78,broken clouds,2024-12-22T09:12:54.839461
+Douala,28.78,broken clouds,2024-12-22T09:13:02.420384
+Bali,26,overcast clouds,2024-12-22T09:13:08.472393
+Bali,26,overcast clouds,2024-12-22T09:14:00.224396
+Dubai,23.96,clear sky,2024-12-22T09:14:10.359388
+Dubai,297.11,clear sky,2024-12-22T09:15:55.784911
+Douala,301.93,broken clouds,2024-12-22T09:16:01.144920
+Douala,28.78,nuageux,2024-12-22T09:18:15.109076
+Bafoussam,22.02,nuageux,2024-12-22T09:18:20.269076

@@ -32,7 +32,8 @@ def index():
         response = requests.get(f'https://api.openweathermap.org/data/2.5/weather', params={
             'q': city,  # Paramètre pour spécifier la ville
             'appid': API_KEY,  # Paramètre pour inclure la clé API
-            'units': 'metric'  # Paramètre pour obtenir les températures en Celsius
+            'units': 'metric',  # Paramètre pour la température en degrés Celsius
+            'lang': 'fr'  # Paramètre pour la langue française
         })
         if response.ok:  # Vérifie si la réponse de l'API est réussie (code 200)
             data = response.json()  # Convertit la réponse en JSON
@@ -40,6 +41,7 @@ def index():
             weather = {
                 'city': data['name'],  # Nom de la ville
                 'temperature': data['main']['temp'],  # Température actuelle
+                "humidite": data["main"]["humidity"], # L'humidité 
                 'description': data['weather'][0]['description'],  # Description de la météo
                 'icon': data['weather'][0]['icon']  # Icône représentant les conditions météorologiques
             }
@@ -47,6 +49,7 @@ def index():
             save_history({
                 'city': weather['city'],  # Ville recherchée
                 'temperature': weather['temperature'],  # Température récupérée
+                'humidite': weather['humidite'], #Humidité recuperée
                 'description': weather['description'],  # Description de la météo
                 'datetime': datetime.now().isoformat()  # Date et heure de la recherche
             })

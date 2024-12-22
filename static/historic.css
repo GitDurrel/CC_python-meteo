@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1E3A8A, #60A5FA);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    text-align: center;
+    overflow: hidden; /* Évite le débordement vertical */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 900px;
+    max-height: 80vh; /* Limite la hauteur */
+    margin-top: 20px;
+    color: #333;
+    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFA500;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Tableaux pour l'historique */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #FFA500;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Liens */
+a {
+    color: #FFA500;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Assurer la responsivité et éviter les débordements */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
