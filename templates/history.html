@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Historique</title>
+    <style>
+        /* Tableaux */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #007bff;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2; /* Ligne paire avec fond gris clair */
+        }
+
+        tr:hover {
+            background: #e9ecef; /* Ligne survolée */
+        }
+
+        /* Liens */
+        a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Historique des Recherches</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ville</th>
+                    <th>Température</th>
+                    <th>Description</th>
+                    <th>Date et Heure</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in history %}
+                <tr>
+                    <td>{{ entry.city }}</td>
+                    <td>{{ entry.temperature }} °C</td>
+                    <td>{{ entry.description }}</td>
+                    <td>{{ entry.datetime }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('download') }}">Télécharger en CSV</a> | 
+        <a href="{{ url_for('index') }}">Retour à l'accueil</a>
+    </div>
+</body>
+</html>
